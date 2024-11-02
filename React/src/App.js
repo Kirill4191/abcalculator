@@ -4,7 +4,7 @@ import './App.css';
 export default function App() {
   return (
     <h1 className="text-3xl font-bold underline">
-      Hello world! Test12345
+      Hello world! Test from cursor
     </h1>
   )
 }
