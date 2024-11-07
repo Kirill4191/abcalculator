@@ -1,15 +1,13 @@
 import React, { useState } from 'react';
-import './App.css';
+import './index.css';
 import api from './api';
-
+// import StickyNavbar from './components/StickyNavbar';
+import Button from './components/Button';
 
 export default function App() {
-  
   const [sampleSize, setSampleSize] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
-
-  
 
   const fetchSampleSize = async () => {
     setLoading(true);
@@ -26,19 +24,17 @@ export default function App() {
   };
 
   return (
-    <div className="App">
-      <h1>AB Test Calculator</h1>
-
-      
-
-      <div className="api-section">
-        <button type="button" onClick={fetchSampleSize}>
-          Get Sample Size
-        </button>
-        {loading && <p>Loading...</p>}
-        {error && <p className="error">{error}</p>}
-        {sampleSize !== null && <p>Sample Size: {sampleSize}</p>}
+      <div className="App">
+        <h1>AB Test Calculator</h1>
+        
+        <div className="api-section">
+          <Button variant='primary' onClick={fetchSampleSize}>
+            Calculate
+          </Button>
+          {loading && <p>Loading...</p>}
+          {error && <p className="error">{error}</p>}
+          {sampleSize !== null && <p>Sample Size: {sampleSize}</p>}
+        </div>
       </div>
-    </div>
   );
-};
+}
