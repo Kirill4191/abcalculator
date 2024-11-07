@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './index.css';
 import api from './api';
-// import StickyNavbar from './components/StickyNavbar';
+import StickyNavbar from './components/StickyNavbar';
 import Button from './components/Button';
 
 export default function App() {
@@ -25,8 +25,9 @@ export default function App() {
 
   return (
       <div className="App">
+        <StickyNavbar/>
         <h1>AB Test Calculator</h1>
-        
+
         <div className="api-section">
           <Button variant='primary' onClick={fetchSampleSize}>
             Calculate
