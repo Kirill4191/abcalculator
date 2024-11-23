@@ -1,7 +1,6 @@
 // import statements
 import React from 'react';
 import PropTypes from 'prop-types'; // Optional: For prop type checking
-// import './Button.css'; // Or your chosen styling method
 
 // Component definition
 const Button = (props) => {
@@ -9,8 +8,8 @@ const Button = (props) => {
     const { onClick, children, disabled, type, className, variant } = props;
 
     const variants = {
-        primary: 'w-[150px] h-[40px] rounded-md bg-blue-500 text-white font-bold px-8 py-2 hover:bg-blue-600',
-        secondary: 'bg-gray-500 text-white hover:bg-gray-600',
+        primary: 'w-[150px] h-[40px] rounded-md bg-blue-500 font-sans text-white text-p-md font-semibold px-8 py-2 hover:bg-blue-600',
+        secondary: 'w-[150px] h-[40px] rounded-md bg-gray-500 font-sans text-white text-p-md  hover:bg-gray-600',
         // Add more variants as needed
       };
   
