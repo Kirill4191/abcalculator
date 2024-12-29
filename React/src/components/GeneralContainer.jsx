@@ -7,16 +7,25 @@ import PropTypes from 'prop-types'; // Optional: For prop type checking
 const GeneralContainer = (props) => {
 
     // Destructure props for easier access
-    const {children, title, className } = props;
+    const {number, children, title, className } = props;
 
     return (
         // here is the resin container code with title, margins, color
-            <div>
-            <p>{title}</p>
-            <div className="w-[930px] border-solid border-2 border-black-600">
+        <div className="flex gap-6 mb-8">
+            <div className="text-4xl font-bold text-gray-700 mt-6">{number}</div>
+            <div className="flex-1">
+            <div className="h-6 pl-6">
+                <h2 className="text-xl font-semibold -mt-2 bg-white pr-2 inline-block -ml-6">
+                {title}
+                </h2>
+            </div>
+            <div className="border border-gray-200 rounded-lg shadow-sm bg-white relative">
+                <div className="p-6 -mt-8">
                 {children}
+                </div>
             </div>
             </div>
+        </div>
     );
 }
 
