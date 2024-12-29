@@ -8,16 +8,18 @@ const Layout = ({ children }) => {
         <div className="h-full max-w-[1440px] mx-auto">
           <div className="grid grid-cols-12 gap-6 h-full">
             {[...Array(12)].map((_, i) => (
-              <div key={i} className="col-span-1 h-full bg-gray-100/10 border-x border-gray-200/20" />
+              <div key={i} className="col-span-1 h-full bg-red-100/40 border-x border-gray-200/20" />
             ))}
           </div>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="relative mx-auto max-w-[1440px] px-20">
-        <div className="grid grid-cols-12 gap-6">
-          {children}
+      <div className="relative px-20">
+        <div className="mx-auto max-w-[1440px]">
+          <div className="grid grid-cols-12 gap-6 bg-green-100/40">
+            {children}
+          </div>
         </div>
       </div>
     </div>

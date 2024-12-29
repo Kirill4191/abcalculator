@@ -33,41 +33,51 @@ export default function App() {
         <h1 className="font-bold text-h4 font-sans mt-3 mb-4">AB Test Calculator</h1>
       </div>
       
-      <div className="col-span-12">
-        <GeneralContainer number="1" title="Choose a test">
-          <p className="mt-3">Input to choose a test here</p>
-        </GeneralContainer>
-      </div>
+        <div className="col-start-1 justify-self-end self-center">
+          <p className="text-h3">1</p>
+        </div>
+        <div className="col-span-10">
+          <GeneralContainer title="Choose a test">
+            <p className="mt-3">Input to choose a test here</p>
+          </GeneralContainer>
+        </div>
 
-      <div className="col-span-12">
-        <GeneralContainer number="2" title="Input parameters">
+      <div className="col-start-1 justify-self-end self-center">
+        <p className="text-h3">2</p>
+      </div>
+      <div className="col-start-2 col-span-10">
+        <GeneralContainer title="Input parameters">
           <p className="mt-3">Input of params here</p>
         </GeneralContainer>
       </div>
 
+      
       {/* Adjusted button alignment */}
-      <div className="col-span-12">
-        <div className="grid grid-cols-12 gap-6">
-          <div className="col-start-2 col-span-10">
-            <div className="pl-6"> {/* Match padding with GeneralContainer */}
+      <div className="col-start-2 col-span-10 flex gap-6">
               <Button variant="primary" onClick={fetchSampleSize}>
                 Calculate
               </Button>
-            </div>
-          </div>
-        </div>
+              <Button variant="secondary" onClick={console.log('clear')}>
+              Clear
+              </Button>
       </div>
-        
-      <div className="col-span-12">
-        <GeneralContainer number="3" title="Result">
+      
+      <div className="col-start-1 justify-self-end self-center">
+        <p className="text-h3">3</p>
+      </div>       
+      <div className="col-start-2 col-span-10">
+        <GeneralContainer title="Result">
           {loading && <p>Loading...</p>}
           {error && <p className="error">{error}</p>}
           {sampleSize !== null && <p>Sample Size: {sampleSize}</p>}
         </GeneralContainer>
       </div>
 
-      <div className="col-span-12">
-        <GeneralContainer number="4" title="Report">
+      <div className="col-start-1 justify-self-end self-center">
+        <p className="text-h3">4</p>
+      </div>
+      <div className="col-start-2 col-span-10">
+        <GeneralContainer title="Report">
           <p className="mt-3">Report here</p>
         </GeneralContainer>
       </div>
