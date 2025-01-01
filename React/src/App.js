@@ -30,7 +30,7 @@ export default function App() {
     <StickyNavbar/>
     <Layout>
       <div className="col-span-12 text-center">
-        <h1 className="font-bold text-h4 font-sans mt-3 mb-4">AB Test Calculator</h1>
+        <h1 className="font-bold text-h4 font-sans mt-3 mb-4">AB Calculator</h1>
       </div>
       
         <div className="col-start-1 justify-self-end self-center">
@@ -57,7 +57,7 @@ export default function App() {
               <Button variant="primary" onClick={fetchSampleSize}>
                 Calculate
               </Button>
-              <Button variant="secondary" onClick={console.log('clear')}>
+              <Button variant="secondary" onClick={()=> setSampleSize(null)}>
               Clear
               </Button>
       </div>
