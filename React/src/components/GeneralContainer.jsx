@@ -15,11 +15,11 @@ const GeneralContainer = (props) => {
             {/* Content */}
             <div className="flex-1">
                 <div className="h-6 pl-6">
-                    <h2 className="text-xl font-semibold -mt-2 bg-white pr-2 inline-block -ml-6">
+                    <h2 className="text-p-lg font-medium -mt-2 pr-2 inline-block -ml-6">
                         {title}
                     </h2>
                 </div>
-                <div className="border border-gray-200 rounded-lg shadow-sm bg-white relative">
+                <div className="border border-gray-200 rounded-lg shadow-md bg-white relative">
                     <div className="p-6 -mt-8">
                         {children}
                     </div>

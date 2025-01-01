@@ -15,9 +15,11 @@ const StickyNavbar = () => {
 
   return (
     <nav className="sticky top-0 z-10 bg-white shadow-md">
-      <div className="mx-auto px-20 max-w-[1440px]">
-        <div className="grid grid-cols-12 gap-6">
-          {navList}
+      <div className='px-20'>
+        <div className="mx-auto max-w-[1440px]">
+          <div className="grid grid-cols-12 gap-6">
+            {navList}
+          </div>
         </div>
       </div>
     </nav>

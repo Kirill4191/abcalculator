@@ -26,7 +26,7 @@ export default function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App bg-[#F4F7FA]">
     <StickyNavbar/>
     <Layout>
       <div className="col-span-12 text-center">
@@ -34,7 +34,7 @@ export default function App() {
       </div>
       
         <div className="col-start-1 justify-self-end self-center">
-          <p className="text-h3">1</p>
+          <p className="text-h3 pt-1  ">1</p>
         </div>
         <div className="col-span-10">
           <GeneralContainer title="Choose a test">
@@ -43,7 +43,7 @@ export default function App() {
         </div>
 
       <div className="col-start-1 justify-self-end self-center">
-        <p className="text-h3">2</p>
+        <p className="text-h3 pt-1">2</p>
       </div>
       <div className="col-start-2 col-span-10">
         <GeneralContainer title="Input parameters">
@@ -63,18 +63,18 @@ export default function App() {
       </div>
       
       <div className="col-start-1 justify-self-end self-center">
-        <p className="text-h3">3</p>
+        <p className="text-h3 pt-1">3</p>
       </div>       
       <div className="col-start-2 col-span-10">
         <GeneralContainer title="Result">
           {loading && <p>Loading...</p>}
           {error && <p className="error">{error}</p>}
-          {sampleSize !== null && <p>Sample Size: {sampleSize}</p>}
+          {sampleSize !== null && <p>Required Sample Size: {sampleSize}</p>}
         </GeneralContainer>
       </div>
 
       <div className="col-start-1 justify-self-end self-center">
-        <p className="text-h3">4</p>
+        <p className="text-h3 pt-1">4</p>
       </div>
       <div className="col-start-2 col-span-10">
         <GeneralContainer title="Report">
