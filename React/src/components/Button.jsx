@@ -9,7 +9,7 @@ const Button = (props) => {
 
     const variants = {
         primary: 'w-[150px] h-[40px] rounded-md bg-blue-500 font-sans text-white text-p-md font-semibold px-8 py-2 hover:bg-blue-600',
-        secondary: 'w-[150px] h-[40px] rounded-md bg-gray-500 font-sans text-white text-p-md  hover:bg-gray-600',
+        secondary: 'w-[150px] h-[40px] rounded-md font-sans text-gray text-p-md  hover:bg-gray-300',
         // Add more variants as needed
       };
   

@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
 import './index.css';
 import api from './api';
-import StickyNavbar from './components/StickyNavbar';
+import StickyNavbar from './layouts/StickyNavbar';
 import Button from './components/Button';
 import GeneralContainer from './components/GeneralContainer';
-import Layout from './components/Layout';
+import Layout from './layouts/Layout';
+import { Label } from "./components/ui/Label.tsx";
+import { RadioGroup, RadioGroupItem } from "./components/ui/RadioGroup.tsx";
+
 
 export default function App() {
   const [sampleSize, setSampleSize] = useState(null);
@@ -79,9 +82,13 @@ export default function App() {
       <div className="col-start-2 col-span-10">
         <GeneralContainer title="Report">
           <p className="mt-3">Report here</p>
+
         </GeneralContainer>
       </div>
     </Layout>
   </div>
   );
 }
+
+
+// разобраться как скрестить tsx и App.js, shadcn компоненты не заводятся
