@@ -100,7 +100,7 @@ export default function App() {
                   setStatisticalTest(""); // Reset statistical test when family changes
                 }}
               >
-                <SelectTrigger className="w-full !text-p-m border-black">
+                <SelectTrigger className="w-full !text-p-md border-black">
                   <SelectValue placeholder="Select test family" />
                 </SelectTrigger>
                 <SelectContent>
