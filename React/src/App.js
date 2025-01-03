@@ -41,7 +41,22 @@ export default function App() {
         </div>
         <div className="col-span-10">
           <GeneralContainer title="Choose a test">
-            <p className="mt-3">Input to choose a test here</p>
+
+          <RadioGroup defaultValue="option-one" orientation="horizontal" className="flex space-x-4 mb-3">
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="option-one" id="option-one" />
+              <Label htmlFor="option-one" className="!text-p-md">Sample size</Label>
+            </div>
+            <div className="flex items-center space-x-2">
+              <RadioGroupItem value="option-two" id="option-two" />
+              <Label htmlFor="option-two" className="!text-p-md">Test result</Label>
+            </div>
+          </RadioGroup>
+
+          <p>dfsfdfd</p>
+
+
+          
           </GeneralContainer>
         </div>
 
@@ -50,7 +65,7 @@ export default function App() {
       </div>
       <div className="col-start-2 col-span-10">
         <GeneralContainer title="Input parameters">
-          <p className="mt-3">Input of params here</p>
+          <p className="">Input of params here</p>
         </GeneralContainer>
       </div>
 
@@ -81,13 +96,10 @@ export default function App() {
       </div>
       <div className="col-start-2 col-span-10">
         <GeneralContainer title="Report">
-          <p className="mt-3">Report here</p>
+          <p className="">Report here</p>
         </GeneralContainer>
       </div>
     </Layout>
   </div>
   );
 }
-
-
-// разобраться как скрестить tsx и App.js, shadcn компоненты не заводятся
