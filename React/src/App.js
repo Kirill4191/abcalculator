@@ -82,7 +82,6 @@ export default function App() {
       <div className="col-start-2 col-span-10">
         <GeneralContainer title="Report">
           <p className="mt-3">Report here</p>
-
         </GeneralContainer>
       </div>
     </Layout>
