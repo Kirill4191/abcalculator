@@ -20,7 +20,7 @@ const GeneralContainer = (props) => {
                     </h2>
                 </div>
                 <div className="border border-gray-200 rounded-lg shadow-md bg-white relative">
-                    <div className="px-6 py-2">
+                    <div className="px-8 py-4">
                         {children}
                     </div>
                 </div>

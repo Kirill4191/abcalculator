@@ -8,8 +8,8 @@ const Button = (props) => {
     const { onClick, children, disabled, type, className, variant } = props;
 
     const variants = {
-        primary: 'w-[150px] h-[40px] rounded-md bg-blue-500 font-sans text-white text-p-md font-semibold px-8 py-2 hover:bg-blue-600',
-        secondary: 'w-[150px] h-[40px] rounded-md font-sans text-gray text-p-md  hover:bg-gray-300',
+        primary: 'w-[150px] h-[40px] rounded-md bg-[#095CA4] font-sans text-white text-p-md font-semibold px-8 py-2 hover:bg-blue-900',
+        secondary: 'w-[150px] h-[40px] rounded-md bg-white border border-gray-600 font-sans text-gray-700 text-p-md  hover:bg-gray-400',
         // Add more variants as needed
       };
   
