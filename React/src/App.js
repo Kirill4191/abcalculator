@@ -25,6 +25,10 @@ export default function App() {
   const [testType, setTestType] = useState("sample-size");
   const [testFamily, setTestFamily] = useState("t-tests");
   const [statisticalTest, setStatisticalTest] = useState("");
+
+  // States for test settings
+  const [testHypothesis, setTestHypothesis] = useState("h1-not-equal");
+
  
   // Test options data
   const testFamilyOptions = [
@@ -38,12 +42,35 @@ export default function App() {
        value: "two-independent-means", 
        label: "Means: diff between two independent means (two groups)" 
      },
+     
+     { 
+      value: "one-independent-mean", 
+      label: "Means: diff from constant (one sample case)" 
+    },
+
+    { 
+      value: "two-dependent-means", 
+      label: "Means: diff between two dependent means (matched pairs)" 
+    },
      // Add more t-test options
    ],
    "z-tests": [
      // Add z-test options
+     { 
+      value: "two-independent-proportions", 
+      label: "Proportions: Diff between two independent proportions" 
+    },
    ]
   };
+
+
+   // Test settings hypothesis data
+   const testHypothesisOptions = [
+    { value: "h1-not-equal", label: "H1: μ ≠ μ0" },
+    { value: "h1-more", label: "H1: μ > μ0" },
+    { value: "h1-less", label: "H1: μ < μ0" },
+  ];
+
 
   const fetchSampleSize = async () => {
     setLoading(true);
@@ -142,7 +169,79 @@ export default function App() {
       </div>
       <div className="col-start-2 col-span-10">
         <GeneralContainer title="Input parameters">
-          <p className="">Input of params here</p>
+            {/* <div className="col-start-1 col-span-2 space-y-1">
+              <Label className="!text-p-md font-semibold">Test settings</Label>
+              <Select 
+                value={testHypothesis} 
+                onValueChange={(value) => {
+                  setTestHypothesis(value);
+
+                }}
+              >
+                <SelectTrigger className="w-full !text-p-md border-black">
+                  <SelectValue placeholder="Select test family" />
+                </SelectTrigger>
+                <SelectContent>
+                  {testHypothesisOptions.map((option) => (
+                    <SelectItem key={option.value} value={option.value}>
+                      {option.label}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div> */}
+
+            <div className="flex flex-col gap-6">
+              {/* Main grid for two columns - Test settings and Sample description */}
+              <div className="grid grid-cols-3 gap-8">
+                {/* Left column - Test settings */}
+                <div className="flex flex-col gap-4">
+                  <Label className="text-lg font-medium">Test settings</Label>
+                  
+                  {/* Grid for label-input pairs */}
+                  <div className="grid grid-cols-[120px_1fr] gap-y-4 items-center">
+                    <Label>Hypothesis</Label>
+                    <Select 
+                      value={testHypothesis} 
+                      onValueChange={(value) => {
+                        setTestHypothesis(value);
+
+                      }}
+                    >
+                      <SelectTrigger className="w-full !text-p-md border-black">
+                        <SelectValue placeholder="Select test family" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {testHypothesisOptions.map((option) => (
+                          <SelectItem key={option.value} value={option.value}>
+                            {option.label}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+
+                    <Label>MDE</Label>
+
+                    <Label>Significance α</Label>
+
+                    <Label>Power (1-β)</Label>
+                  </div>
+                </div>
+
+                {/* Right column - Sample description */}
+                <div className="flex flex-col gap-4">
+                  <Label className="text-lg font-medium">Sample description</Label>
+                  
+                  {/* Grid for label-input pairs */}
+                  <div className="grid grid-cols-[120px_1fr] gap-y-4 items-center">
+                    <Label>μ control</Label>
+
+                    <Label>σ control</Label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
         </GeneralContainer>
       </div>
 
