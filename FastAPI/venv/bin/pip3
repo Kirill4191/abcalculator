@@ -1,4 +1,4 @@
-#!/Users/kirilleremeev/Coding/abcacl/FastAPI/venv/bin/python3
+#!/Users/kirilleremeev/Coding/abcalc/FastAPI/venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
